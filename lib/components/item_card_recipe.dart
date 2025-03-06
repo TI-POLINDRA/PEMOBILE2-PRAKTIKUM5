@@ -6,11 +6,11 @@ class ItemCardRecipe extends StatelessWidget {
   final VoidCallback onTap;
 
   const ItemCardRecipe({
-    Key? key,
+    super.key,
     required this.image,
     required this.title,
     required this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -4,8 +4,7 @@ class TitleSection extends StatelessWidget {
   final String title;
   final VoidCallback onPressed;
 
-  const TitleSection({Key? key, required this.title, required this.onPressed})
-    : super(key: key);
+  const TitleSection({super.key, required this.title, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {

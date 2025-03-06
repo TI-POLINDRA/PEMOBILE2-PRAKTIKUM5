@@ -3,7 +3,7 @@ import 'package:praktikum_5/services/api_service.dart';
 import 'package:praktikum_5/models/banner_model.dart';
 
 class BannerCarousel extends StatefulWidget {
-  const BannerCarousel({Key? key}) : super(key: key);
+  const BannerCarousel({super.key});
 
   @override
   _BannerCarouselState createState() => _BannerCarouselState();

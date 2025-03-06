@@ -7,7 +7,7 @@ import 'package:praktikum_5/configs/demo.dart';
 import 'package:praktikum_5/screens/recipe_detail_screen.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -56,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
             sliver: SliverToBoxAdapter(child: BannerCarousel()),
           ),
           TitleSection(title: "Jenis Makanan", onPressed: () {}),
-          SliverToBoxAdapter(child: FoodCategories()),
+          // SliverToBoxAdapter(child: FoodCategories()),
           TitleSection(title: "Resep", onPressed: () {}),
           // make list 2 grid column
           SliverPadding(

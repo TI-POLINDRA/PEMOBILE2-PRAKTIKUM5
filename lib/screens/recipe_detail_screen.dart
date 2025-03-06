@@ -4,7 +4,7 @@ import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:praktikum_5/configs/demo.dart';
 
 class RecipeDetailScreen extends StatelessWidget {
-  const RecipeDetailScreen({Key? key}) : super(key: key);
+  const RecipeDetailScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -36,7 +36,20 @@ class RecipeDetailScreen extends StatelessWidget {
               children: [
                 Stack(
                   children: [
-                    Image.network(ApiService.getAsset(recipe.image)),
+                    Container(
+                      width: double.maxFinite,
+                      height: 300,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(12),
+                          bottomRight: Radius.circular(12),
+                        ),
+                        child: Image.network(
+                          ApiService.getAsset(recipe.image),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
                     Column(
                       children: [
                         SizedBox(height: 200),
@@ -74,7 +87,7 @@ class RecipeDetailScreen extends StatelessWidget {
           ),
           SliverToBoxAdapter(
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+              padding: EdgeInsets.symmetric(vertical: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [Html(data: recipe.steps!)],

@@ -22,7 +22,7 @@ class ItemCardRecipe extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(10),
             child: Container(
-              height: 150,
+              height: 170,
               width: double.maxFinite,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10),

@@ -39,7 +39,7 @@ class _BannerCarouselState extends State<BannerCarousel> {
                   (context, index) => ClipRRect(
                     borderRadius: BorderRadius.circular(10),
                     child: Image.network(
-                      'https://cms.cicd.my.id/assets/${snapshot.data![index].image}',
+                      ApiService.getAsset(snapshot.data![index].image),
                       fit: BoxFit.cover,
                     ),
                   ),

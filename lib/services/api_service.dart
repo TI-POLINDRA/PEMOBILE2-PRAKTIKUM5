@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:praktikum_5/models/banner_model.dart';
 import 'package:praktikum_5/models/category_model.dart';
+import 'package:praktikum_5/models/recipe_model.dart';
 
 class ApiService {
   static var API_URL = 'https://polindra.cicd.my.id/items/';
@@ -36,6 +37,19 @@ class ApiService {
       final dynamic body = jsonDecode(response.body);
       final List<dynamic> data = body['data'];
       return data.map((item) => CategoryModel.fromJson(item)).toList();
+    } else {
+      throw Exception('Failed to load categories');
+    }
+  }
+
+  static Future<List<RecipeModel>> getRecipes() async {
+    final response = await http.get(
+      getUri('fr_recipes?filter[status][_eq]=published'),
+    );
+    if (response.statusCode == 200) {
+      final dynamic body = jsonDecode(response.body);
+      final List<dynamic> data = body['data'];
+      return data.map((item) => RecipeModel.fromJson(item)).toList();
     } else {
       throw Exception('Failed to load categories');
     }

@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 class ItemCardRecipe extends StatelessWidget {
   final String image;
-  final String title;
+  final String name;
   final VoidCallback onTap;
 
   const ItemCardRecipe({
     Key? key,
     required this.image,
-    required this.title,
+    required this.name,
     required this.onTap,
   }) : super(key: key);
 
@@ -21,10 +21,17 @@ class ItemCardRecipe extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(10),
-            child: Container(child: Image.asset(image, fit: BoxFit.cover)),
+            child: Container(
+              height: 150,
+              width: double.maxFinite,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Image.network(image, fit: BoxFit.cover),
+              ),
+            ),
           ),
           SizedBox(height: 10),
-          Text(title),
+          Text(name),
         ],
       ),
     );

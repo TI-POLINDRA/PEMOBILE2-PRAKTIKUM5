@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:praktikum_5/configs/demo.dart';
 import 'package:praktikum_5/models/banner_model.dart';
 import 'package:praktikum_5/services/api_service.dart';
 

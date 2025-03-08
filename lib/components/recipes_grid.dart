@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:praktikum_5/components/item_card_recipe.dart';
 import 'package:praktikum_5/models/recipe_model.dart';
+import 'package:praktikum_5/screens/recipe_detail_screen.dart';
 import 'package:praktikum_5/services/api_service.dart';
 
 class RecipesGrid extends StatefulWidget {
@@ -48,17 +49,14 @@ Widget TampilanViewDibuatFungsiTerpisah(
       ),
       delegate: SliverChildBuilderDelegate((context, index) {
         return ItemCardRecipe(
-          image: ApiService.getAsset(snapshot.data![index].image),
-          name: snapshot.data![index].name!,
-          onTap: () {
-            // Navigator.push(
-            //   context,
-            //   MaterialPageRoute(
-            //     builder:
-            //         (context) =>
-            //             RecipeDetailScreen(recipe: snapshot.data[index]),
-            //   ),
-            // );
+          recipe: snapshot.data![index],
+          onTap: (RecipeModel recipe) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => RecipeDetailScreen(recipe: recipe),
+              ),
+            );
           },
         );
       }, childCount: snapshot.data!.length),

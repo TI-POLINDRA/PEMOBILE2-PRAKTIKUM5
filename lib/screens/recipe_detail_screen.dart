@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:praktikum_5/components/bottom_sheet_dialog_review.dart';
 import 'package:praktikum_5/models/recipe_model.dart';
 import 'package:praktikum_5/services/api_service.dart';
 
@@ -94,6 +95,7 @@ class RecipeDetailScreen extends StatelessWidget {
               ),
             ),
           ),
+          SliverToBoxAdapter(child: BottomSheetDialogReview()),
         ],
       ),
     );

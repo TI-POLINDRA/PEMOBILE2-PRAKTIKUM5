@@ -1,0 +1,338 @@
+{
+  "author": "Unnamed",
+  "title": "Food Recipes Apps",
+  "date": "2025-03-15T02:57:19.195Z",
+  "tables": [
+    {
+      "id": 0,
+      "name": "fr_banners",
+      "x": -59.99999999999994,
+      "y": -73.00000000000006,
+      "fields": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": 0
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": 255
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": 65535
+        },
+        {
+          "name": "image",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 3,
+          "size": 255
+        }
+      ],
+      "comment": "",
+      "indices": [
+        {
+          "id": 0,
+          "name": "fr_banners_index_0",
+          "unique": false,
+          "fields": [
+            "id"
+          ]
+        }
+      ],
+      "color": "#175e7a",
+      "key": 1741332815456
+    },
+    {
+      "id": 1,
+      "name": "fr_categories",
+      "x": 234.9999999999999,
+      "y": -227,
+      "fields": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": 0
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": 255
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": 255
+        },
+        {
+          "name": "image",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 3,
+          "size": 255
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#f03c3c",
+      "key": 1742006410400
+    },
+    {
+      "id": 2,
+      "name": "fr_recipes",
+      "x": -59,
+      "y": -370,
+      "fields": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": 0
+        },
+        {
+          "name": "category_id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": 255
+        },
+        {
+          "name": "ingredients",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 3,
+          "size": 65535
+        },
+        {
+          "name": "steps",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 4,
+          "size": 65535
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#bc49c4",
+      "key": 1742006451080
+    },
+    {
+      "id": 3,
+      "name": "fr_reviews",
+      "x": -348.99999999999994,
+      "y": -281,
+      "fields": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": 0
+        },
+        {
+          "name": "recipes_id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": 255
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 3,
+          "size": 255
+        },
+        {
+          "name": "ratting",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 4,
+          "size": 255
+        },
+        {
+          "name": "image",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 5,
+          "size": 255
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#7d9dff",
+      "key": 1742006812834
+    }
+  ],
+  "relationships": [
+    {
+      "startTableId": 1,
+      "startFieldId": 0,
+      "endTableId": 2,
+      "endFieldId": 1,
+      "cardinality": "One to many",
+      "updateConstraint": "Cascade",
+      "deleteConstraint": "Cascade",
+      "name": "fr_categories_id_fk",
+      "id": 0
+    },
+    {
+      "startTableId": 2,
+      "startFieldId": 0,
+      "endTableId": 3,
+      "endFieldId": 1,
+      "cardinality": "One to many",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fr_recipes_id_fk",
+      "id": 1
+    }
+  ],
+  "notes": [],
+  "subjectAreas": [],
+  "database": "postgresql",
+  "types": [],
+  "enums": []
+}

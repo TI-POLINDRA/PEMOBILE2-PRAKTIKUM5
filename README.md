@@ -18,3 +18,12 @@ Logic implemenatation with Rest API dan Others API
    ```
 
 3. Lanjutkan ikuti langkah praktikum dari modul yang telah diberikan di Edlink.
+
+## Design System
+
+1. ERD
+   Rancangan database didesain menggunakan [DrawDB Web Apps](https://www.drawdb.app/editor)
+
+   ![ERD Diagram](.github/assets/Food%20Recipes%20Apps_2025-03-15T02_57_12.200Z.png)
+
+   File Draw DB dapat didwonload di [link ini](.github/assets/Food%20Recipes%20Apps_2025-03-15T02_57_12.200Z.ddb).
